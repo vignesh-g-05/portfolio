@@ -42,9 +42,7 @@ export default function App() {
           </button>
 
           <Button>Primary</Button>
-          <Button variant="outline">Outline</Button>
           <Button variant="secondary">Secondary</Button>
-          <Button variant="ghost">Ghost</Button>
           <Button variant="destructive">destructive</Button>
         </div>
       </section>
