@@ -150,6 +150,11 @@
 body {
   @apply bg-background text-foreground font-sans antialiased;
 }
+
+button {
+  cursor: pointer;
+}
+
 .scrollbar-minimal::-webkit-scrollbar {
   width: 4px;
   height: 4px;
@@ -180,4 +185,9 @@ body {
 .scrollbar-minimal {
   scrollbar-width: thin;
   scrollbar-color: rgba(120, 120, 120, 0.45) transparent;
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }
