@@ -39,7 +39,7 @@ const skills = [
   },
   {
     label: "Tailwind",
-    src: "/icons/skills/tailwind.svg",
+    src: "/icons/skills/tailwindcss.svg",
     color: "bg-[#0EA5E9]/20",
     category: "Styling",
   },
