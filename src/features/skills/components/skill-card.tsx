@@ -7,7 +7,7 @@ type SkillCardProps = {
 
 const SkillCard = ({ label, src, color, category }: SkillCardProps) => {
   return (
-    <div className="bg-secondary border-border/40 flex items-center gap-2.5 rounded-md border px-3 py-2.5 shadow-md transition-all duration-200 hover:-translate-y-0.5">
+    <div className="bg-card border-border/40 flex items-center gap-2.5 rounded-md border px-3 py-2.5 shadow-md transition-all duration-200 hover:-translate-y-0.5">
       <img
         src={src}
         alt={label}

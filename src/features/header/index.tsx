@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { AnimatedThemeToggler } from "@/components/ui/shadcn/animated-theme-toggler";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -24,9 +23,6 @@ const Header = () => {
 
         {/* Action + Mobile Hamburger */}
         <div className="flex items-center gap-3">
-          {/* Theme Button */}
-          <AnimatedThemeToggler className="bg-primary text-primary-foreground grid size-8 place-content-center rounded-sm [&>svg]:size-4" />
-
           <button
             onClick={() => setOpen(!open)}
             className="bg-primary text-primary-foreground grid size-8 place-content-center rounded-sm md:hidden [&>svg]:size-4"
