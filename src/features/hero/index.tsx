@@ -16,7 +16,7 @@ const Hero = () => {
   return (
     <section
       aria-label="Introduction"
-      className="grid min-h-[70vh] items-center gap-10 md:grid-cols-2"
+      className="grid h-screen items-center gap-10 md:grid-cols-2"
     >
       <div className="space-y-8">
         <div className="space-y-4">
