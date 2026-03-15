@@ -2,6 +2,7 @@ import Hero from "./features/hero";
 import Header from "./features/header";
 import Skills from "./features/skills";
 import Projects from "./features/projects";
+import Experience from "./features/experience";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <Hero />
       <Skills />
       <Projects />
+      <Experience />
     </main>
   );
 }
