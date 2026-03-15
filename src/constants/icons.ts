@@ -33,6 +33,50 @@ export const SKILL_ICONS = {
     icon: `${ICON_PATH}/git.svg`,
     label: "Git",
   },
+  redux: {
+    icon: `${ICON_PATH}/redux.svg`,
+    label: "Redux",
+  },
+  firebase: {
+    icon: `${ICON_PATH}/firebase.svg`,
+    label: "Firebase",
+  },
+  framer: {
+    icon: `${ICON_PATH}/framer.svg`,
+    label: "Framer Motion",
+  },
+  socketio: {
+    icon: `${ICON_PATH}/socketio.svg`,
+    label: "Socket.io",
+  },
+  redis: {
+    icon: `${ICON_PATH}/redis.svg`,
+    label: "Redis",
+  },
+  gemini: {
+    icon: `${ICON_PATH}/gemini.svg`,
+    label: "Gemini API",
+  },
+  neon: {
+    icon: `${ICON_PATH}/neon.svg`,
+    label: "Neon DB",
+  },
+  linux: {
+    icon: `${ICON_PATH}/linux.svg`,
+    label: "Linux",
+  },
+  bash: {
+    icon: `${ICON_PATH}/bash.svg`,
+    label: "Bash",
+  },
+  css: {
+    icon: `${ICON_PATH}/css.svg`,
+    label: "CSS",
+  },
+  lua: {
+    icon: `${ICON_PATH}/lua.svg`,
+    label: "Lua",
+  },
 } as const;
 
 export type Skill = keyof typeof SKILL_ICONS;

@@ -1,13 +1,18 @@
 import { ChevronRight } from "lucide-react";
-import type { Project } from "../types";
 
-const ProjectCard = ({ description, title }: Project) => {
+type ProjectCardProps = {
+  title: string;
+  description: string;
+};
+
+const ProjectCard = ({ description, title }: ProjectCardProps) => {
   return (
-    <article className="group bg-card border-border/40 flex cursor-pointer items-center justify-between rounded-md border p-4 shadow-sm">
+    <article className="group bg-card border-border/40 flex cursor-pointer items-center justify-between rounded-md border p-4 text-left shadow-sm">
       <div className="space-y-1">
-        <h3 className="font-heading text-lg font-semibold">{title}</h3>
-
-        <p className="text-muted-foreground text-sm">{description}</p>
+        <h3 className="font-heading font-semibold md:text-lg">{title}</h3>
+        <p className="text-muted-foreground text-xs md:text-sm">
+          {description}
+        </p>
       </div>
 
       <ChevronRight
