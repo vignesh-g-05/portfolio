@@ -73,6 +73,7 @@ const Projects = () => {
             <ProjectCard
               title={project.title}
               description={project.description}
+              company={project.company}
             />
           </ProjectDetails>
         ))}
