@@ -25,8 +25,8 @@ const techStacks: TechStack[] = [
   },
   {
     icon: "express",
-    color: "bg-white/70",
-    category: "Backend Framework",
+    color: "bg-black/20",
+    category: "Framework",
   },
   {
     icon: "mongodb",
@@ -46,7 +46,7 @@ const techStacks: TechStack[] = [
   {
     icon: "git",
     color: "bg-[#F1502F]/20",
-    category: "Version Control",
+    category: "Version\u{00A0}Control",
   },
 ];
 

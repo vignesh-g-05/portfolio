@@ -13,10 +13,10 @@ const SkillCard = ({ icon, color, category }: SkillCardProps) => {
       <img
         src={skill.icon}
         alt={skill.label}
-        className={`size-10 rounded-sm p-2 ${color}`}
+        className={`size-8 rounded-sm p-2 md:size-10 ${color}`}
       />
       <div className="flex flex-col justify-center">
-        <p className="font-medium">{skill.label}</p>
+        <p className="text-sm font-medium md:text-base">{skill.label}</p>
         <span className="text-muted-foreground text-xs">{category}</span>
       </div>
     </div>

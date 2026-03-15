@@ -23,7 +23,7 @@ export const SKILL_ICONS = {
   },
   tailwindcss: {
     icon: `${ICON_PATH}/tailwindcss.svg`,
-    label: "Tailwind CSS",
+    label: "TailwindCSS",
   },
   typescript: {
     icon: `${ICON_PATH}/typescript.svg`,
