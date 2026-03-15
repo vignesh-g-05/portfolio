@@ -3,6 +3,7 @@ import Header from "./features/header";
 import Skills from "./features/skills";
 import Projects from "./features/projects";
 import Experience from "./features/experience";
+import About from "./features/about";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Skills />
       <Projects />
       <Experience />
+      <About />
     </main>
   );
 }
