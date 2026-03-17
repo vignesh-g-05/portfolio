@@ -4,6 +4,7 @@ import Skills from "./features/skills";
 import Projects from "./features/projects";
 import Experience from "./features/experience";
 import About from "./features/about";
+import Contact from "./features/contact";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <Projects />
       <Experience />
       <About />
+      <Contact />
     </main>
   );
 }
