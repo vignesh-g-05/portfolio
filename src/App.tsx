@@ -5,6 +5,7 @@ import Projects from "./features/projects";
 import Experience from "./features/experience";
 import About from "./features/about";
 import Contact from "./features/contact";
+import Footer from "./features/footer";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Experience />
       <About />
       <Contact />
+      <Footer />
     </main>
   );
 }
