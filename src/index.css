@@ -45,6 +45,7 @@
   --font-sans: "Inter", sans-serif;
   --font-heading: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+  --animate-caret: caret-blink-bg 1.2s steps(1, end) infinite;
 }
 
 :root {
@@ -139,4 +140,19 @@ button {
 ::view-transition-new(root) {
   animation: none;
   mix-blend-mode: normal;
+}
+
+@keyframes caret-blink-bg {
+  0% {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+  }
+  50% {
+    background-color: transparent;
+    color: var(--secondary-foreground);
+  }
+  100% {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+  }
 }

@@ -1,22 +1,25 @@
-const NEO_FETCH_ART = `
- ___      ___
-|\\  \\    /  /|
-\\ \\  \\  /  / /
- \\ \\  \\/  / /
-  \\ \\    / /
-   \\ \\__/ /
-    \\|__|/
-`;
-const NEO_FETCH_TEXT = `
+import { useEffect, useRef, useState } from "react";
 
-name:      Vignesh G
-role:      Full-Stack Developer
-stack:     React · Next.js · Node
-focus:     Web apps & clean UI
-status:    Open to interesting work
-`;
+import { NEO_FETCH_ART, NEO_FETCH_TEXT } from "../constants/ui";
+import TerminalHistory from "./terminal-history";
+import TerminalPrompt from "./terminal-prompt";
 
+export type History = {
+  prompt: string;
+  output: string;
+};
 const Terminal = () => {
+  const [cursor, setCursor] = useState(0);
+  const [input, setInput] = useState("");
+  const [history, setHistory] = useState<History[]>([]);
+
+  const inputEndRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    inputEndRef.current?.scrollIntoView({
+      block: "nearest",
+    });
+  }, [input, history]);
+
   return (
     <div
       role="presentation"
@@ -30,7 +33,7 @@ const Terminal = () => {
         </div>
 
         <p className="text-muted-foreground absolute left-1/2 -translate-x-1/2 text-xs">
-          vignesh.dev - terminal{" "}
+          vignesh.dev - terminal
         </p>
       </div>
       <div className="scrollbar-minimal aspect-video space-y-4 overflow-auto p-4 font-mono text-sm">
@@ -38,7 +41,6 @@ const Terminal = () => {
           <pre className="text-primary mr-10 text-xs leading-tight">
             {NEO_FETCH_ART}
           </pre>
-
           <pre className="text-xs leading-tight">{NEO_FETCH_TEXT}</pre>
         </div>
 
@@ -46,14 +48,16 @@ const Terminal = () => {
           Type <span className="text-green-400">help</span> to see available
           commands.
         </p>
-        <div className="space-y-1">
-          <div className="flex gap-3">
-            <p>
-              <span className="text-primary/90">vicky@portfolio</span>:~$
-            </p>
-            <span className="bg-primary animate-caret-blink inline-block w-2"></span>
-          </div>
-        </div>
+        <TerminalHistory history={history} />
+
+        <TerminalPrompt
+          cursor={cursor}
+          input={input}
+          setCursor={setCursor}
+          setInput={setInput}
+          setHistory={setHistory}
+        />
+        <div ref={inputEndRef}></div>
       </div>
     </div>
   );
