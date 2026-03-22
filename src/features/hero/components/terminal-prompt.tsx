@@ -2,6 +2,7 @@ import { type Dispatch, type SetStateAction, useRef } from "react";
 
 import { PROMPT_COMPONENT } from "../constants/ui";
 import { type History } from "./terminal";
+import { TERMINAL_COMMANDS } from "../constants/terminal-commands";
 
 const TerminalPrompt = ({
   input,
@@ -36,10 +37,30 @@ const TerminalPrompt = ({
         onKeyDown={(e) => {
           if (e.key === "Enter") {
             e.preventDefault();
-            setHistory((prev) => [...prev, { prompt: input, output: input }]);
+
+            if (!input.trim()) return;
+
+            const [cmd, ...args] = input.trim().split(" ");
+            const command = TERMINAL_COMMANDS[cmd];
+
+            const output = command
+              ? command(args)
+              : `command not found: ${cmd}.`;
+
+            if (output === "__CLEAR__") {
+              setHistory([]);
+              setInput("");
+              setCursor(0);
+              return;
+            }
+
+            setHistory((prev) => [...prev, { prompt: input, output }]);
+
             setInput("");
+            setCursor(0);
           }
-          if (e.shiftKey || (e.ctrlKey && ["a", "v", "x"].includes(e.key))) {
+
+          if (e.shiftKey) {
             e.preventDefault();
           }
         }}

@@ -4,7 +4,7 @@ import type { Project } from "./types";
 
 const IMAGE_BASE_URL = "/images/projects";
 
-const projects: Project[] = [
+export const projects: Project[] = [
   {
     title: "ChatMaxima Widget",
     description: "Embeddable AI chat widget for websites",

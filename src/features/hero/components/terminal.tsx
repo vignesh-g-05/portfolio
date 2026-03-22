@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 import { NEO_FETCH_ART, NEO_FETCH_TEXT } from "../constants/ui";
 import TerminalHistory from "./terminal-history";
@@ -6,7 +6,7 @@ import TerminalPrompt from "./terminal-prompt";
 
 export type History = {
   prompt: string;
-  output: string;
+  output: ReactNode;
 };
 const Terminal = () => {
   const [cursor, setCursor] = useState(0);
