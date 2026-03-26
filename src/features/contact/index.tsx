@@ -3,7 +3,11 @@ import { Mail, MessageSquare, User } from "lucide-react";
 
 export default function ContactForm() {
   return (
-    <section className="space-y-6" aria-labelledby="contact-heading">
+    <section
+      className="space-y-6"
+      id="contact"
+      aria-labelledby="contact-heading"
+    >
       <h2
         id="contact-heading"
         className="font-heading text-2xl font-bold md:text-3xl"
