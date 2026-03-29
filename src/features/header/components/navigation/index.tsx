@@ -6,7 +6,7 @@ const Navigation = () => {
     <nav className="hidden md:block">
       <ul className="flex items-center gap-6 text-sm font-medium">
         {NAV_ITEMS.map((item) => {
-          return <NavItem {...item} />;
+          return <NavItem key={item.label} {...item} />;
         })}
       </ul>
     </nav>

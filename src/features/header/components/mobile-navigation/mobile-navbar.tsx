@@ -12,7 +12,7 @@ const MobileNavbar = ({ open }: { open: boolean }) => {
     >
       <ul className="p-2 text-sm font-medium">
         {NAV_ITEMS.map((item) => (
-          <MobileNavItem {...item} />
+          <MobileNavItem key={item.label} {...item} />
         ))}
       </ul>
     </nav>
