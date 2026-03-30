@@ -4,7 +4,7 @@ import { Mail, MessageSquare, User } from "lucide-react";
 export default function ContactForm() {
   return (
     <section
-      className="space-y-6"
+      className="scroll-mt-40 space-y-6"
       id="contact"
       aria-labelledby="contact-heading"
     >

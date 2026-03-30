@@ -52,7 +52,11 @@ const techStacks: TechStack[] = [
 
 const Skills = () => {
   return (
-    <section className="space-y-5" aria-labelledby="skills-heading">
+    <section
+      className="scroll-mt-40 space-y-5"
+      aria-labelledby="skills-heading"
+      id="skills"
+    >
       <h2
         id="skills-heading"
         className="font-heading text-2xl font-bold md:text-3xl"

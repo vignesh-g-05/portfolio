@@ -1,6 +1,10 @@
 const Experience = () => {
   return (
-    <section className="space-y-5" aria-labelledby="experience-heading">
+    <section
+      className="scroll-mt-40 space-y-5"
+      aria-labelledby="experience-heading"
+      id="experience"
+    >
       <h2
         id="experience-heading"
         className="font-heading text-2xl font-bold md:text-3xl"

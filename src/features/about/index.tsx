@@ -1,7 +1,8 @@
 const About = () => {
   return (
     <section
-      className="flex flex-col items-center gap-8 md:flex-row md:items-start"
+      className="flex scroll-mt-40 flex-col items-center gap-8 md:flex-row md:items-start"
+      id="about"
       aria-labelledby="about-heading"
     >
       <div className="space-y-5">
