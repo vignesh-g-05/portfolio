@@ -60,7 +60,11 @@ export const projects: Project[] = [
 
 const Projects = () => {
   return (
-    <section className="space-y-5" aria-labelledby="projects-heading">
+    <section
+      className="scroll-mt-40 space-y-5"
+      id="projects"
+      aria-labelledby="projects-heading"
+    >
       <h2
         id="projects-heading"
         className="font-heading text-2xl font-bold md:text-3xl"

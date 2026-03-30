@@ -23,7 +23,7 @@ const Terminal = () => {
   return (
     <div
       role="presentation"
-      className="dark:bg-secondary/50 mx-auto w-full max-w-130 overflow-hidden rounded-lg bg-white text-sm shadow-lg"
+      className="dark:bg-secondary/50 mx-auto hidden w-full max-w-130 overflow-hidden rounded-lg bg-white text-sm shadow-lg md:block"
     >
       <div className="border-border/50 relative flex items-center border-b px-4 py-2">
         <div className="flex items-center gap-2">
