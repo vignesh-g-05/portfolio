@@ -1,7 +1,7 @@
 import { type Dispatch, type SetStateAction, useRef } from "react";
 
 import { type History } from "./terminal";
-import { TERMINAL_COMMANDS } from "../constants/terminal-commands";
+import { TERMINAL_COMMANDS } from "./commands";
 import PromptComponent from "./prompt-component";
 
 const TerminalPrompt = ({
@@ -44,7 +44,7 @@ const TerminalPrompt = ({
             const command = TERMINAL_COMMANDS[cmd];
 
             const output = command
-              ? command(args)
+              ? command.getOutput(args)
               : `command not found: ${cmd}.`;
 
             if (output === "__CLEAR__") {

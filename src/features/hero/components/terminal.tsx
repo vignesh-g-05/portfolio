@@ -2,7 +2,8 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 
 import TerminalHistory from "./terminal-history";
 import TerminalPrompt from "./terminal-prompt";
-import NeoFetch from "./neofetch";
+import NeoFetch from "./commands/neofetch";
+import Help from "./commands/help";
 
 export type History = {
   prompt: string;
@@ -15,6 +16,10 @@ const Terminal = () => {
     {
       prompt: "__START__",
       output: <NeoFetch />,
+    },
+    {
+      prompt: "__START__",
+      output: <Help type="hint" />,
     },
   ]);
 

@@ -6,11 +6,11 @@ const TerminalHistory = ({ history }: { history: History[] }) => {
     <>
       {history.map((h) => {
         return (
-          <div className="space-y-1 wrap-break-word whitespace-pre-wrap">
+          <div className="wrap-break-word whitespace-pre-wrap">
             <div>
               <PromptComponent prompt={h.prompt} />
             </div>
-            <div className="text-muted-foreground">{h.output}</div>
+            <div className="text-muted-foreground my-5">{h.output}</div>
           </div>
         );
       })}

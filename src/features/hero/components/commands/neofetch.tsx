@@ -1,4 +1,4 @@
-import { NEO_FETCH_ART, NEOFETCH_DATA } from "../constants/ui";
+import { NEO_FETCH_ART, NEOFETCH_DATA } from "../../constants/ui";
 
 const NeoFetch = () => {
   return (
