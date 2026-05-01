@@ -1,3 +1,11 @@
+import {
+  BriefcaseBusiness,
+  Info,
+  LaptopMinimal,
+  MapPin,
+  User,
+} from "lucide-react";
+
 export const NEO_FETCH_ART = `
  ___      ___
 |\\  \\    /  /|
@@ -7,14 +15,34 @@ export const NEO_FETCH_ART = `
    \\ \\__/ /
     \\|__|/
 `;
-export const NEO_FETCH_TEXT = `
 
-name:      Vignesh G
-role:      Full-Stack Developer
-stack:     React · Next.js · Node
-focus:     Web apps & clean UI
-status:    Open to interesting work
-`;
+export const NEOFETCH_DATA = [
+  {
+    Icon: User,
+    label: "name",
+    value: "Vignesh G",
+  },
+  {
+    Icon: BriefcaseBusiness,
+    label: "role",
+    value: "Full-Stack Developer",
+  },
+  {
+    Icon: LaptopMinimal,
+    label: "stack",
+    value: "React · Next.js · Node",
+  },
+  {
+    Icon: MapPin,
+    label: "location",
+    value: "Tamil Nadu, India",
+  },
+  {
+    Icon: Info,
+    label: "status",
+    value: "Open to interesting work",
+  },
+];
 
 export const PROMPT_COMPONENT = (
   <span className="mr-2 inline-block">

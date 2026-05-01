@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       aria-label="Introduction"
-      className="mt-30 grid items-center gap-10 md:mt-0 md:h-screen md:grid-cols-2"
+      className="mt-30 grid items-center gap-10 md:mt-0 md:h-screen lg:grid-cols-2"
     >
       <HeroDetails />
       <Terminal />

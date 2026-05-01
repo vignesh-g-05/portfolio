@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
-import { NEO_FETCH_ART, NEO_FETCH_TEXT } from "../constants/ui";
 import TerminalHistory from "./terminal-history";
 import TerminalPrompt from "./terminal-prompt";
+import NeoFetch from "./neofetch";
 
 export type History = {
   prompt: string;
@@ -23,7 +23,7 @@ const Terminal = () => {
   return (
     <div
       role="presentation"
-      className="bg-background border-border mx-auto hidden w-full overflow-hidden rounded-lg border text-sm md:block"
+      className="bg-background border-border mx-auto w-full overflow-hidden rounded-lg border text-sm md:block"
       style={{
         boxShadow: `0 0 0 1px var(--border),
                     0 25px 80px rgba(0,0,0,.7),
@@ -42,17 +42,7 @@ const Terminal = () => {
         </p>
       </div>
       <div className="scrollbar-minimal aspect-video space-y-4 overflow-auto p-4 font-mono text-sm">
-        <div className="flex flex-wrap">
-          <pre className="text-primary mr-10 text-xs leading-tight">
-            {NEO_FETCH_ART}
-          </pre>
-          <pre className="text-xs leading-tight">{NEO_FETCH_TEXT}</pre>
-        </div>
-
-        <p className="text-muted-foreground mt-2 w-full text-xs">
-          Type <span className="text-green-400">help</span> to see available
-          commands.
-        </p>
+        <NeoFetch />
         <TerminalHistory history={history} />
 
         <TerminalPrompt
