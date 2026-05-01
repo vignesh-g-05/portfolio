@@ -23,16 +23,21 @@ const Terminal = () => {
   return (
     <div
       role="presentation"
-      className="dark:bg-secondary/50 mx-auto hidden w-full max-w-130 overflow-hidden rounded-lg bg-white text-sm shadow-lg md:block"
+      className="bg-background border-border mx-auto hidden w-full overflow-hidden rounded-lg border text-sm md:block"
+      style={{
+        boxShadow: `0 0 0 1px var(--border),
+                    0 25px 80px rgba(0,0,0,.7),
+                    0 0 60px #cb96f923`,
+      }}
     >
-      <div className="border-border/50 relative flex items-center border-b px-4 py-2">
+      <div className="bg-accent border-border relative flex items-center border-b p-4">
         <div className="flex items-center gap-2">
-          <span className="size-3 rounded-full bg-[#ff5f57]" />
-          <span className="size-3 rounded-full bg-[#febc2e]" />
-          <span className="size-3 rounded-full bg-[#28c840]" />
+          <span className="bg-destructive size-3 rounded-full" />
+          <span className="bg-chart-4 size-3 rounded-full" />
+          <span className="bg-chart-3 size-3 rounded-full" />
         </div>
 
-        <p className="text-muted-foreground absolute left-1/2 -translate-x-1/2 text-xs">
+        <p className="text-muted-foreground absolute left-1/2 -translate-x-1/2 text-sm">
           vignesh.dev - terminal
         </p>
       </div>

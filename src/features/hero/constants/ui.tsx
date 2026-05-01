@@ -18,6 +18,11 @@ status:    Open to interesting work
 
 export const PROMPT_COMPONENT = (
   <span className="mr-2 inline-block">
-    <span className="text-primary/90">vicky@portfolio</span>:~$
+    <span className="text-chart-2">vicky</span>
+    <span className="text-muted-foreground">@</span>
+    <span className="text-chart-3">portfolio</span>
+    <span className="text-muted-foreground">:</span>
+    <span className="text-primary">~/portfolio</span>
+    <span className="text-muted-foreground">$</span>
   </span>
 );
