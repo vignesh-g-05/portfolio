@@ -3,6 +3,8 @@ import NeoFetch from "./neofetch";
 import Help from "./help";
 import Whoami from "./whoami";
 import Skills from "./skills";
+import Projects from "./projects";
+import Experience from "./experience";
 
 type Command = {
   description: string;
@@ -24,6 +26,11 @@ export const TERMINAL_COMMANDS: Record<string, Command> = {
         .join(" "),
   },
 
+  experience: {
+    description: "work history",
+    getOutput: () => <Experience />,
+  },
+
   help: {
     description: "show available commands",
     getOutput: () => <Help />,
@@ -32,6 +39,11 @@ export const TERMINAL_COMMANDS: Record<string, Command> = {
   neofetch: {
     description: "portfolio information",
     getOutput: () => <NeoFetch />,
+  },
+
+  projects: {
+    description: "featured projects",
+    getOutput: () => <Projects />,
   },
 
   skills: {

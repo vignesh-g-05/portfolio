@@ -26,7 +26,7 @@ const NeoFetchData = () => {
               </div>
               <div>{data.label}</div>
             </div>
-            <div>{data.value}</div>
+            <div className="text-foreground">{data.value}</div>
           </div>
         );
       })}
