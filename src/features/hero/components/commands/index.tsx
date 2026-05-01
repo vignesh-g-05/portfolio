@@ -5,6 +5,7 @@ import Whoami from "./whoami";
 import Skills from "./skills";
 import Projects from "./projects";
 import Experience from "./experience";
+import Contact from "./contact";
 
 type Command = {
   description: string;
@@ -15,6 +16,11 @@ export const TERMINAL_COMMANDS: Record<string, Command> = {
   clear: {
     description: "clear the terminal",
     getOutput: () => "__CLEAR__",
+  },
+
+  contact: {
+    description: "get in touch",
+    getOutput: () => <Contact />,
   },
 
   echo: {
