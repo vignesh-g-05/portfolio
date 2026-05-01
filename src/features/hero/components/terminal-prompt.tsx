@@ -43,9 +43,16 @@ const TerminalPrompt = ({
             const [cmd, ...args] = input.trim().split(" ");
             const command = TERMINAL_COMMANDS[cmd];
 
-            const output = command
-              ? command.getOutput(args)
-              : `command not found: ${cmd}.`;
+            const output = command ? (
+              command.getOutput(args)
+            ) : (
+              <p className="text-destructive">
+                command not found: {cmd}&nbsp;
+                <span className="text-muted-foreground">
+                  (type <span className="text-chart-2">help</span> for commands)
+                </span>
+              </p>
+            );
 
             if (output === "__CLEAR__") {
               setHistory([]);
