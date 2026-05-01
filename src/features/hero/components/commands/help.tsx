@@ -13,8 +13,8 @@ const Help = ({ type }: HelpProps) => {
       {Object.entries(TERMINAL_COMMANDS).map(([key, value]) => (
         <div className="grid grid-cols-[100px_1fr]">
           <span className="text-chart-2">{key}</span>
-          <span>
-            <span>→&nbsp;</span>
+          <span className="flex gap-2">
+            <span>→</span>
             <span>{value.description}</span>
           </span>
         </div>
