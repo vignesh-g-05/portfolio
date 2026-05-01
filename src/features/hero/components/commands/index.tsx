@@ -13,6 +13,15 @@ export const TERMINAL_COMMANDS: Record<string, Command> = {
     getOutput: () => "__CLEAR__",
   },
 
+  echo: {
+    description: "print text",
+    getOutput: (args) =>
+      args
+        ?.map((str) => str.trim())
+        .filter(Boolean)
+        .join(" "),
+  },
+
   help: {
     description: "show available commands",
     getOutput: () => <Help />,
