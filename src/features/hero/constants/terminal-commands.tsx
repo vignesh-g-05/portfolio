@@ -1,9 +1,12 @@
 import { projects } from "@/features/projects";
 import type { ReactNode } from "react";
+import NeoFetch from "../components/neofetch";
 type Command = (args?: string[]) => ReactNode;
 
 export const TERMINAL_COMMANDS: Record<string, Command> = {
   clear: () => "__CLEAR__",
+
+  neofetch: () => <NeoFetch />,
 
   whoami: () => "Vignesh G",
 

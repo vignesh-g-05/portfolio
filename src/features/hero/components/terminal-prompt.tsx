@@ -1,8 +1,8 @@
 import { type Dispatch, type SetStateAction, useRef } from "react";
 
-import { PROMPT_COMPONENT } from "../constants/ui";
 import { type History } from "./terminal";
 import { TERMINAL_COMMANDS } from "../constants/terminal-commands";
+import PromptComponent from "./prompt-component";
 
 const TerminalPrompt = ({
   input,
@@ -20,7 +20,7 @@ const TerminalPrompt = ({
   const inputRef = useRef<HTMLInputElement>(null);
 
   return (
-    <div className="group relative space-y-1" onClick={() => {}}>
+    <div className="group relative" onClick={() => {}}>
       <input
         ref={inputRef}
         aria-hidden
@@ -72,7 +72,7 @@ const TerminalPrompt = ({
           inputRef.current?.focus();
         }}
       >
-        {PROMPT_COMPONENT}
+        <PromptComponent prompt="" />
         {input.split("").map((char, i) => {
           if (i === cursor) {
             return (

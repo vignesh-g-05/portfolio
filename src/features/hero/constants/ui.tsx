@@ -43,14 +43,3 @@ export const NEOFETCH_DATA = [
     value: "Open to interesting work",
   },
 ];
-
-export const PROMPT_COMPONENT = (
-  <span className="mr-2 inline-block">
-    <span className="text-chart-2">vicky</span>
-    <span className="text-muted-foreground">@</span>
-    <span className="text-chart-3">portfolio</span>
-    <span className="text-muted-foreground">:</span>
-    <span className="text-primary">~/portfolio</span>
-    <span className="text-muted-foreground">$</span>
-  </span>
-);

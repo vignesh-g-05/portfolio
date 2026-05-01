@@ -11,7 +11,12 @@ export type History = {
 const Terminal = () => {
   const [cursor, setCursor] = useState(0);
   const [input, setInput] = useState("");
-  const [history, setHistory] = useState<History[]>([]);
+  const [history, setHistory] = useState<History[]>([
+    {
+      prompt: "__START__",
+      output: <NeoFetch />,
+    },
+  ]);
 
   const inputEndRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -42,9 +47,7 @@ const Terminal = () => {
         </p>
       </div>
       <div className="scrollbar-minimal aspect-video space-y-4 overflow-auto p-4 font-mono text-sm">
-        <NeoFetch />
         <TerminalHistory history={history} />
-
         <TerminalPrompt
           cursor={cursor}
           input={input}
