@@ -1,45 +1,37 @@
 import { buttonVariants } from "@/components/ui/shadcn/button";
+import { siteConfig } from "@/configs/site";
 import { cn } from "@/lib/utils";
-import {
-  BriefcaseBusiness,
-  FileText,
-  Folder,
-  Github,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-} from "lucide-react";
+import { BriefcaseBusiness, FileText, Folder, MapPin } from "lucide-react";
+
 const HeroDetails = () => {
   return (
     <div className="space-y-8">
       <div className="space-y-4">
         <h1 className="font-heading text-primary text-5xl font-extrabold md:text-6xl lg:text-7xl">
-          Vignesh G
+          {siteConfig.name}
         </h1>
         <h2 className="text-lg md:text-xl lg:text-2xl">Full-Stack Developer</h2>
-        <p className="text-muted-foreground max-w-125 text-xs md:text-sm lg:text-base">
-          I build full-stack apps with Next.js, working across UI, APIs, and
-          testing. I focus on performance and clean architecture.
+        <p className="text-muted-foreground max-w-125 text-sm lg:text-base">
+          {siteConfig.description}
         </p>
       </div>
 
       <div className="flex flex-wrap items-center gap-6 text-sm">
         <div className="flex items-center gap-3">
           <MapPin aria-hidden className="size-4" />
-          <p>Tamil Nadu, India.</p>
+          <p>{siteConfig.location}</p>
         </div>
         <div className="flex items-center gap-3">
           <BriefcaseBusiness aria-hidden className="size-4" />
           <p>
             Software Developer at&nbsp;
             <a
-              href="https://techmaxima.in"
+              href={siteConfig.company.url}
               target="_blank"
               rel="noopener noreferrer"
               className="decoration-muted-foreground/60 hover:decoration-primary underline underline-offset-4"
             >
-              TechMaxima
+              {siteConfig.company.name}
             </a>
           </p>
         </div>
@@ -48,62 +40,50 @@ const HeroDetails = () => {
       <div className="flex flex-wrap items-center gap-4">
         <a href="#projects" className={cn(buttonVariants())}>
           <Folder aria-hidden />
-          View Projects
+          See My Work
         </a>
         <a
           href="/vignesh-g-fullstack-developer-resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className={cn(buttonVariants())}
+          className={cn(buttonVariants({ variant: "outline" }), "bg-secondary")}
         >
           <FileText aria-hidden />
           View Resume
         </a>
       </div>
 
-      <div className="flex items-center gap-3">
-        <a
-          aria-label="Email"
-          href="mailto:gvignesh05@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={cn(buttonVariants({ size: "sm" }))}
-        >
-          <Mail />
-        </a>
-
-        <a
-          aria-label="LinkedIn"
-          href="https://www.linkedin.com/in/-vignesh-g/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={cn(buttonVariants({ size: "sm" }))}
-        >
-          <Linkedin />
-        </a>
-
-        <a
-          aria-label="GitHub"
-          href="https://github.com/vignesh-g-05"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={cn(buttonVariants({ size: "sm" }))}
-        >
-          <Github />
-        </a>
-
-        <a
-          aria-label="Phone"
-          href="tel:+91 12345 12345"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={cn(buttonVariants({ size: "sm" }))}
-        >
-          <Phone />
-        </a>
+      <div className="border-muted flex items-center gap-3">
+        <ContactIcons />
+        <p className="text-muted-foreground hidden text-xs md:block">
+          <span className="bg-primary mr-2 inline-block size-2 rounded-full"></span>
+          Connect with me
+        </p>
       </div>
     </div>
   );
 };
 
 export default HeroDetails;
+
+const ContactIcons = () => {
+  return (
+    <div className="border-border flex items-center gap-3 pr-4 md:border-r-2">
+      {siteConfig.contacts.map((item) => (
+        <a
+          key={item.label}
+          aria-label={item.label}
+          href={item.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={cn(
+            buttonVariants({ variant: "outline", size: "sm" }),
+            "shadow-primary bg-secondary size-10 rounded-full hover:shadow-[0_0_10px]",
+          )}
+        >
+          <item.Icon />
+        </a>
+      ))}
+    </div>
+  );
+};

@@ -42,16 +42,16 @@ const Terminal = () => {
     >
       <div className="bg-accent border-border relative flex items-center border-b p-4">
         <div className="flex items-center gap-2">
-          <span className="bg-destructive size-3 rounded-full" />
-          <span className="bg-chart-4 size-3 rounded-full" />
-          <span className="bg-chart-3 size-3 rounded-full" />
+          <span className="bg-destructive size-2.5 rounded-full md:size-3" />
+          <span className="bg-chart-4 size-2.5 rounded-full md:size-3" />
+          <span className="bg-chart-3 size-2.5 rounded-full md:size-3" />
         </div>
 
-        <p className="text-muted-foreground absolute left-1/2 -translate-x-1/2 text-sm">
+        <p className="text-muted-foreground absolute left-1/2 -translate-x-1/2 text-xs md:text-sm">
           vignesh.dev - terminal
         </p>
       </div>
-      <div className="scrollbar-minimal aspect-video space-y-4 overflow-auto p-4 font-mono text-sm">
+      <div className="scrollbar-minimal aspect-video space-y-4 overflow-auto p-4 font-mono text-xs md:text-sm">
         <TerminalHistory history={history} />
         <TerminalPrompt
           cursor={cursor}

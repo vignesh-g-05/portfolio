@@ -11,6 +11,7 @@ const buttonVariants = cva(
         default: "bg-primary text-primary-foreground border-primary-foreground",
         destructive: "bg-destructive text-white",
         secondary: "bg-secondary text-secondary-foreground",
+        outline: "bg-transparent border-2 border-border",
       },
 
       size: {

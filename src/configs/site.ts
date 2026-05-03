@@ -1,0 +1,44 @@
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
+
+export const siteConfig = {
+  name: "Vignesh G",
+
+  role: "Full-Stack Developer",
+
+  description:
+    "Full-stack developer specializing in React, with solid experience building backend APIs and real-time features using Express.",
+
+  location: "Tamil Nadu, India",
+
+  company: {
+    name: "TechMaxima",
+    url: "https://techmaxima.in",
+  },
+
+  contacts: [
+    {
+      label: "Email",
+      value: "vignesh.g.2805@gmail.com",
+      href: "mailto:vignesh.g.2805@gmail.com",
+      Icon: Mail,
+    },
+    {
+      label: "LinkedIn",
+      value: "linkedin.com/in/-vignesh-g",
+      href: "https://www.linkedin.com/in/-vignesh-g/",
+      Icon: Linkedin,
+    },
+    {
+      label: "GitHub",
+      value: "github.com/vignesh-g-05",
+      href: "https://github.com/vignesh-g-05/",
+      Icon: Github,
+    },
+    {
+      label: "Phone",
+      value: "+91 73393 78237",
+      href: "tel:+917339378237",
+      Icon: Phone,
+    },
+  ],
+};

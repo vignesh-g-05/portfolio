@@ -66,10 +66,6 @@ const TerminalPrompt = ({
             setInput("");
             setCursor(0);
           }
-
-          if (e.shiftKey) {
-            e.preventDefault();
-          }
         }}
       />
       <div

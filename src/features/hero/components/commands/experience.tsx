@@ -17,7 +17,7 @@ const Experience = () => {
             <span className="text-primary font-bold">◆ {exp.role}</span>{" "}
             <span>@</span> <span className="text-chart-2">{exp.company}</span>
           </p>
-          <p className="text-chart-3 ml-8 text-sm">{exp.duration}</p>
+          <p className="text-chart-3 ml-8">{exp.duration}</p>
 
           <p className="ml-8 text-xs text-white">{exp.description}</p>
         </div>
