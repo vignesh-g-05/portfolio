@@ -1,11 +1,11 @@
 const About = () => {
   return (
     <section
-      className="flex scroll-mt-40 flex-col items-center gap-8 md:flex-row md:items-start"
       id="about"
       aria-labelledby="about-heading"
+      className="flex scroll-mt-40 flex-col gap-8 md:flex-row md:items-start md:justify-between"
     >
-      <div className="space-y-5">
+      <div className="max-w-xl space-y-5">
         <h2
           id="about-heading"
           className="font-heading text-2xl font-bold md:text-3xl"
@@ -13,27 +13,43 @@ const About = () => {
           About
         </h2>
 
-        <p>
-          I’m a <b>full-stack developer</b> at <b>TechMaxima</b>.
+        <p className="text-foreground text-sm leading-relaxed">
+          Full-stack developer at{" "}
+          <span className="font-semibold">TechMaxima</span>, building and
+          maintaining real-world applications used in production.
         </p>
 
-        <p>
-          I build and maintain <b>ChatMaxima Widget</b> and <b>ChatExpress</b>,
-          working across the entire stack — frontend, backend, testing, and
-          deployment.
+        <p className="text-muted-foreground text-sm leading-relaxed">
+          I work on products like{" "}
+          <span className="text-foreground font-medium">ChatMaxima Widget</span>{" "}
+          and <span className="text-foreground font-medium">ChatExpress</span>,
+          handling frontend, backend APIs, and real-time features.
         </p>
 
-        <p>
-          While building these systems, I adopted technologies like Next.js and
-          Socket.IO to develop real-time features and infrastructure.
-        </p>
+        <ul className="space-y-2 text-sm">
+          <li className="flex items-start gap-2">
+            <span className="bg-primary mt-1 size-1.5 rounded-full" />
+            Built UI-heavy applications using Next.js
+          </li>
+
+          <li className="flex items-start gap-2">
+            <span className="bg-primary mt-1 size-1.5 rounded-full" />
+            Developed backend APIs and real-time systems with Express &
+            Socket.IO
+          </li>
+
+          <li className="flex items-start gap-2">
+            <span className="bg-primary mt-1 size-1.5 rounded-full" />
+            Worked across deployment, testing, and production maintenance
+          </li>
+        </ul>
       </div>
 
       <div className="flex justify-center md:justify-end">
         <img
           src="/images/about.png"
-          alt="Illustration of a developer coding at a cozy desk"
-          className="max-w-70 drop-shadow-2xl transition-transform duration-200 hover:-translate-y-1"
+          alt="Developer working on systems"
+          className="max-w-72 drop-shadow-2xl transition-transform duration-200 hover:-translate-y-1"
         />
       </div>
     </section>
