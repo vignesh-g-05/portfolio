@@ -4,7 +4,9 @@ import type { Project } from "../../types";
 const ProjectSkills = ({ skills }: { skills: Project["skills"] }) => {
   return (
     <>
-      <h5 className="text-sm font-bold">Used Technologies</h5>
+      <h5 className="text-muted-foreground text-xs font-medium tracking-widest">
+        Technologies Used
+      </h5>
 
       <div className="grid grid-cols-[repeat(auto-fit,minmax(80px,1fr))] gap-2.5">
         {skills.map((skill) => {

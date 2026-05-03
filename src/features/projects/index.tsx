@@ -37,6 +37,10 @@ export const projects: Project[] = [
     description: "custom linux desktop built from scratch",
     skills: ["linux", "bash", "lua", "css"],
     image: `${IMAGE_BASE_URL}/linux.png`,
+    actions: {
+      liveLink: "/videos/linux-customization.mp4",
+      githubLink: "https://github.com/vignesh-g-05/dotfiles",
+    },
   },
 
   {

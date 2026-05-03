@@ -20,7 +20,7 @@ const CompanyBadge = ({
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-secondary text-secondary-foreground inline-flex items-center gap-1.5 rounded-sm p-1 text-[10px] font-medium"
+          className="text-secondary-foreground inline-flex items-center gap-1.5 rounded-sm text-[10px] font-medium"
           onClick={(e) => {
             e.stopPropagation();
           }}

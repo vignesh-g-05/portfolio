@@ -16,18 +16,20 @@ const ProjectInfoHeader = ({
   company?: Company;
 }) => {
   const companyDetails = company ? COMPANIES[company] : null;
+
   return (
-    <div className="flex justify-between gap-3">
-      <div className="space-y-1">
-        <div className="flex items-center gap-2">
-          <h4 className="font-bold md:text-lg">{title}</h4>
+    <div className="flex items-start justify-between gap-3">
+      <div className="min-w-0 space-y-1.5">
+        <div className="flex flex-wrap items-center gap-2">
+          <h4 className="font-heading text-foreground text-[17px] font-bold tracking-tight">
+            {title}
+          </h4>
           {companyDetails && <CompanyBadge {...companyDetails} />}
         </div>
-        <p className="text-muted-foreground text-xs md:text-sm">
+        <p className="text-muted-foreground max-w-[42ch] text-[13px] leading-relaxed">
           {description}
         </p>
       </div>
-
       <ProjectActions
         title={title}
         githubLink={githubLink}

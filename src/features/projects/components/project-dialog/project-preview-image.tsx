@@ -6,11 +6,13 @@ const ProjectPreviewImage = ({
   image: string;
 }) => {
   return (
-    <img
-      src={image}
-      alt={`${title} preview`}
-      className="mx-auto aspect-video w-full rounded-sm object-cover"
-    />
+    <div className="mx-auto aspect-video w-full overflow-hidden rounded-sm">
+      <img
+        src={image}
+        alt={`${title} preview`}
+        className="object-cover transition-transform duration-200 hover:scale-105"
+      />
+    </div>
   );
 };
 

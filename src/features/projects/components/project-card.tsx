@@ -11,7 +11,7 @@ type ProjectCardProps = {
 const ProjectCard = ({ description, title, company }: ProjectCardProps) => {
   const companyDetails = company ? COMPANIES[company] : null;
   return (
-    <article className="group bg-card border-border/40 flex cursor-pointer items-center justify-between rounded-md border p-4 text-left shadow-sm">
+    <article className="group bg-secondary border-border flex cursor-pointer items-center justify-between rounded-md border p-4 text-left shadow-sm">
       <div className="space-y-1">
         <div className="flex flex-wrap items-center gap-3 gap-y-1">
           <h3 className="font-heading font-semibold md:text-lg">{title}</h3>
