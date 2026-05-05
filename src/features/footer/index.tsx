@@ -1,4 +1,6 @@
+import { buttonVariants } from "@/components/ui/shadcn/button";
 import { siteConfig } from "@/configs/site";
+import { cn } from "@/lib/utils";
 
 export default function Footer() {
   return (
@@ -40,13 +42,20 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             {siteConfig.contacts.map((contact) => (
               <a
+                key={contact.label}
                 aria-label={contact.label}
                 href={contact.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group border-border bg-secondary hover:bg-background/60 flex size-10 items-center justify-center rounded-full border transition-colors"
+                className={cn(
+                  buttonVariants({ variant: "outline", size: "sm" }),
+                  "group bg-secondary relative size-10 overflow-hidden rounded-full",
+                  "hover:border-foreground/30 transition-all duration-150 hover:-translate-y-px",
+                )}
               >
-                <contact.Icon className="text-muted-foreground group-hover:text-foreground size-4.5 transition-colors" />
+                <span className="pointer-events-none absolute inset-0 bg-linear-to-r from-white/5 to-transparent opacity-0 transition-opacity duration-150 group-hover:opacity-100" />
+
+                <contact.Icon className="group-hover:text-foreground relative z-10 size-4.5 transition-colors" />
               </a>
             ))}
           </div>

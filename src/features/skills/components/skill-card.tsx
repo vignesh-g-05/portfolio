@@ -1,4 +1,5 @@
 import { SKILL_ICONS, type Skill } from "@/constants/icons";
+import { cn } from "@/lib/utils";
 
 type SkillCardProps = {
   icon: Skill;
@@ -9,7 +10,14 @@ type SkillCardProps = {
 const SkillCard = ({ icon, color, category }: SkillCardProps) => {
   const skill = SKILL_ICONS[icon];
   return (
-    <div className="bg-secondary border-border flex items-center gap-2.5 rounded-md border-2 px-3 py-2.5 shadow-md transition-all duration-200 hover:-translate-y-0.5">
+    <div
+      className={cn(
+        "group relative flex items-center gap-3 overflow-hidden",
+        "border-border bg-secondary rounded-md border px-3.5 py-3",
+        "hover:border-foreground/30 transition-all duration-150 hover:-translate-y-px",
+      )}
+    >
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-white/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
       <img
         src={skill.icon}
         alt={skill.label}

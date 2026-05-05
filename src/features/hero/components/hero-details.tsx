@@ -69,19 +69,22 @@ export default HeroDetails;
 const ContactIcons = () => {
   return (
     <div className="border-border flex items-center gap-3 pr-4 md:border-r-2">
-      {siteConfig.contacts.map((item) => (
+      {siteConfig.contacts.map((contact) => (
         <a
-          key={item.label}
-          aria-label={item.label}
-          href={item.href}
+          key={contact.label}
+          aria-label={contact.label}
+          href={contact.href}
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
             buttonVariants({ variant: "outline", size: "sm" }),
-            "shadow-primary bg-secondary size-10 rounded-full hover:shadow-[0_0_10px]",
+            "group bg-secondary relative size-10 overflow-hidden rounded-full",
+            "hover:border-foreground/30 transition-all duration-150 hover:-translate-y-px",
           )}
         >
-          <item.Icon />
+          <span className="pointer-events-none absolute inset-0 bg-linear-to-r from-white/5 to-transparent opacity-0 transition-opacity duration-150 group-hover:opacity-100" />
+
+          <contact.Icon className="group-hover:text-foreground relative z-10 size-4.5 transition-colors" />
         </a>
       ))}
     </div>

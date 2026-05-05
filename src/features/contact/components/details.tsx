@@ -30,7 +30,7 @@ function Details() {
             rel="noopener noreferrer"
             className={cn(
               "group relative flex items-center gap-3 overflow-hidden",
-              "border-border bg-secondary rounded-xl border px-3.5 py-3",
+              "border-border bg-secondary rounded-md border px-3.5 py-3",
               "hover:border-foreground/30 transition-all duration-150 hover:-translate-y-px",
             )}
           >
@@ -55,7 +55,7 @@ function Details() {
         <div
           className={cn(
             "group relative flex items-center gap-3 overflow-hidden",
-            "border-border bg-secondary rounded-xl border px-3.5 py-3",
+            "border-border bg-secondary rounded-md border px-3.5 py-3",
           )}
         >
           <div className="flex size-8.5 shrink-0 items-center justify-center rounded-lg border border-green-400/20 bg-green-400/10 transition-colors">
