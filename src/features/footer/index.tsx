@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { siteConfig } from "@/configs/site";
 
 export default function Footer() {
   return (
@@ -38,41 +38,17 @@ export default function Footer() {
 
           {/* Socials */}
           <div className="flex items-center gap-4">
-            <a
-              aria-label="GitHub"
-              href="https://github.com/vignesh-g-05"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-border/50 hover:border-primary/40 grid size-10 place-content-center rounded-full border transition-all hover:shadow-[0_0_10px_rgba(79,243,243,0.25)]"
-            >
-              <Github className="w-5" />
-            </a>
-
-            <a
-              aria-label="LinkedIn"
-              href="https://www.linkedin.com/in/-vignesh-g/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-border/50 hover:border-primary/40 grid size-10 place-content-center rounded-full border transition-all hover:shadow-[0_0_10px_rgba(79,243,243,0.25)]"
-            >
-              <Linkedin className="w-5" />
-            </a>
-
-            <a
-              aria-label="Email"
-              href="mailto:gvignesh05@gmail.com"
-              className="border-border/50 hover:border-primary/40 grid size-10 place-content-center rounded-full border transition-all hover:shadow-[0_0_10px_rgba(79,243,243,0.25)]"
-            >
-              <Mail className="w-5" />
-            </a>
-
-            <a
-              aria-label="Phone"
-              href="tel:+91 12345 12345"
-              className="border-border/50 hover:border-primary/40 grid size-10 place-content-center rounded-full border transition-all hover:shadow-[0_0_10px_rgba(79,243,243,0.25)]"
-            >
-              <Phone className="w-5" />
-            </a>
+            {siteConfig.contacts.map((contact) => (
+              <a
+                aria-label={contact.label}
+                href={contact.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group border-border bg-secondary hover:bg-background/60 flex size-10 items-center justify-center rounded-full border transition-colors"
+              >
+                <contact.Icon className="text-muted-foreground group-hover:text-foreground size-4.5 transition-colors" />
+              </a>
+            ))}
           </div>
         </div>
 
