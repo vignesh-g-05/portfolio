@@ -1,17 +1,19 @@
+import { cn } from "@/lib/utils";
+
 const NavItem = ({ href, label }: { label: string; href: string }) => {
   return (
-    <li
-      key={label}
-      className="group relative cursor-pointer transition-all duration-300 ease-out"
-    >
+    <li key={href}>
       <a
         href={href}
-        className="group-hover:text-primary relative z-10 px-2 py-1 transition-colors duration-300"
+        className={cn(
+          "text-muted-foreground rounded-md px-3 py-1.5",
+          "transition-all duration-200",
+          "hover:text-foreground",
+          "hover:[text-shadow:0_0_12px_rgba(255,255,255,0.35)]",
+        )}
       >
         {label}
       </a>
-
-      <span className="bg-primary/5 absolute inset-0 rounded-md opacity-0 blur-sm transition-all duration-300 group-hover:opacity-100" />
     </li>
   );
 };

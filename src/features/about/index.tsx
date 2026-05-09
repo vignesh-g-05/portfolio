@@ -14,33 +14,33 @@ const About = () => {
         </h2>
 
         <p className="text-foreground text-sm leading-relaxed">
-          Full-stack developer at{" "}
-          <span className="font-semibold">TechMaxima</span>, building and
-          maintaining real-world applications used in production.
+          Software Developer at{" "}
+          <span className="font-semibold">TechMaxima</span>, working across
+          production applications including CRM widgets, real-time systems, and
+          voice platforms.
         </p>
 
         <p className="text-muted-foreground text-sm leading-relaxed">
-          I work on products like{" "}
-          <span className="text-foreground font-medium">ChatMaxima Widget</span>{" "}
-          and <span className="text-foreground font-medium">ChatExpress</span>,
-          handling frontend, backend APIs, and real-time features.
+          Experienced in improving large legacy codebases, building scalable UI
+          systems, and shipping frontend and backend features used in live
+          products.
         </p>
 
         <ul className="space-y-2 text-sm">
           <li className="flex items-start gap-2">
             <span className="bg-primary mt-1 size-1.5 rounded-full" />
-            Built UI-heavy applications using Next.js
+            Modernized and refactored legacy applications with large TypeScript
+            codebases
           </li>
 
           <li className="flex items-start gap-2">
             <span className="bg-primary mt-1 size-1.5 rounded-full" />
-            Developed backend APIs and real-time systems with Express &
-            Socket.IO
+            Built multilingual, real-time, and voice-enabled product features
           </li>
 
           <li className="flex items-start gap-2">
             <span className="bg-primary mt-1 size-1.5 rounded-full" />
-            Worked across deployment, testing, and production maintenance
+            Worked across frontend, backend, testing, and production maintenance
           </li>
         </ul>
       </div>

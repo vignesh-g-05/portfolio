@@ -21,23 +21,22 @@ export default function Footer() {
 
           {/* Navigation */}
           <ul className="text-muted-foreground flex flex-wrap justify-center gap-6 text-sm">
-            <li>
-              <a href="#skills">Skills</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#experience">Experience</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
+            {siteConfig.navLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className={cn(
+                    "text-muted-foreground rounded-md px-3 py-1.5",
+                    "transition-all duration-200",
+                    "hover:text-foreground",
+                    "hover:[text-shadow:0_0_12px_rgba(255,255,255,0.35)]",
+                  )}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
           </ul>
-
           {/* Socials */}
           <div className="flex items-center gap-4">
             {siteConfig.contacts.map((contact) => (
