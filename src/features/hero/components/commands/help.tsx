@@ -11,7 +11,7 @@ const Help = ({ type }: HelpProps) => {
     <div className="border-border relative w-fit rounded-lg border-2 p-5">
       <p className="bg-background absolute -top-3 px-3">Available Commands</p>
       {Object.entries(TERMINAL_COMMANDS).map(([key, value]) => (
-        <div className="grid grid-cols-[100px_1fr]">
+        <div key={key} className="grid grid-cols-[100px_1fr]">
           <span className="text-chart-2">{key}</span>
           <span className="flex gap-2">
             <span>→</span>
