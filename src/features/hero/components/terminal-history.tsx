@@ -4,13 +4,13 @@ import { type History } from "./terminal";
 const TerminalHistory = ({ history }: { history: History[] }) => {
   return (
     <>
-      {history.map((h) => {
+      {history.map((entry, i) => {
         return (
-          <div className="wrap-break-word whitespace-pre-wrap">
+          <div key={i} className="wrap-break-word whitespace-pre-wrap">
             <div>
-              <PromptComponent prompt={h.prompt} />
+              <PromptComponent prompt={entry.prompt} />
             </div>
-            <div className="text-muted-foreground my-5">{h.output}</div>
+            <div className="text-muted-foreground my-5">{entry.output}</div>
           </div>
         );
       })}
