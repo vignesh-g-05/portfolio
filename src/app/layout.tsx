@@ -1,11 +1,9 @@
 import "./globals.css";
 
-import { Geist } from "next/font/google";
+import { Fredoka, JetBrains_Mono, Outfit, Quicksand } from "next/font/google";
+
 import type { Metadata } from "next";
 import { TooltipProvider } from "@/components/ui/shadcn/tooltip";
-import { cn } from "@/lib/utils";
-
-const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "Vignesh G",
@@ -15,13 +13,21 @@ export const metadata: Metadata = {
   },
 };
 
+export const outfit = Outfit({ subsets: ["latin"] });
+export const quicksand = Quicksand({ subsets: ["latin"] });
+export const jetbrains = JetBrains_Mono({ subsets: ["latin"] });
+export const fredoka = Fredoka({ subsets: ["latin"] });
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
+    <html
+      lang="en"
+      className="bg-background text-foreground font-sans antialiased"
+    >
       <body>
         <TooltipProvider>{children}</TooltipProvider>
       </body>
