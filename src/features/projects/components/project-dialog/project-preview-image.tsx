@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const ProjectPreviewImage = ({
   title,
   image,
@@ -7,7 +9,7 @@ const ProjectPreviewImage = ({
 }) => {
   return (
     <div className="mx-auto aspect-video w-full overflow-hidden rounded-sm">
-      <img
+      <Image
         src={image}
         alt={`${title} preview`}
         className="object-cover transition-transform duration-200 hover:scale-105"

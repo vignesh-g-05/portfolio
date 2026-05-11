@@ -1,5 +1,6 @@
-import { SKILL_ICONS } from "@/constants/icons";
+import Image from "next/image";
 import type { Project } from "../../types";
+import { SKILL_ICONS } from "@/constants/icons";
 
 const ProjectSkills = ({ skills }: { skills: Project["skills"] }) => {
   return (
@@ -17,7 +18,7 @@ const ProjectSkills = ({ skills }: { skills: Project["skills"] }) => {
               key={skill}
               className="bg-secondary text-secondary-foreground hover:bg-secondary/80 flex min-w-max items-center gap-1.5 rounded-sm p-2 text-[10px] font-medium transition-colors md:text-xs"
             >
-              <img
+              <Image
                 src={icon.icon}
                 alt=""
                 aria-hidden

@@ -1,5 +1,7 @@
-import { cn } from "@/lib/utils";
 import { CalendarDays, Check, ExternalLink } from "lucide-react";
+
+import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 const Experience = () => {
   return (
@@ -24,7 +26,7 @@ const Experience = () => {
               rel="noopener noreferrer"
               className="shrink-0"
             >
-              <img
+              <Image
                 src="/icons/companies/techmaxima.png"
                 alt="TechMaxima logo"
                 className="border-border size-11 rounded-lg border object-contain md:size-12"

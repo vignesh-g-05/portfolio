@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 const Logo = () => {
   return (
-    <a
+    <Link
       href="/"
       className="text-primary font-logo group group/logo flex items-center gap-2 text-2xl font-semibold"
     >
@@ -13,7 +15,7 @@ const Logo = () => {
           Vicky.dev
         </span>
       </p>
-    </a>
+    </Link>
   );
 };
 

@@ -1,5 +1,7 @@
 import { Tooltip, TooltipContent, TooltipTrigger } from "./shadcn/tooltip";
 
+import Image from "next/image";
+
 type CompanyBadgeProps = {
   url: string;
   icon: string;
@@ -25,7 +27,7 @@ const CompanyBadge = ({
             e.stopPropagation();
           }}
         >
-          <img
+          <Image
             src={icon}
             className="size-4 rounded-xs object-cover"
             alt={label}

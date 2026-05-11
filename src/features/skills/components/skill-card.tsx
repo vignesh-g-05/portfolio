@@ -1,5 +1,6 @@
 import { SKILL_ICONS, type Skill } from "@/constants/icons";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 type SkillCardProps = {
   icon: Skill;
@@ -18,7 +19,7 @@ const SkillCard = ({ icon, color, category }: SkillCardProps) => {
       )}
     >
       <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-white/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-      <img
+      <Image
         src={skill.icon}
         alt={skill.label}
         className={`size-8 rounded-sm p-2 md:size-10 ${color}`}
