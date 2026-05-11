@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const About = () => {
   return (
     <section
@@ -46,7 +48,7 @@ const About = () => {
       </div>
 
       <div className="flex justify-center md:justify-end">
-        <img
+        <Image
           src="/images/about.png"
           alt="Developer working on systems"
           className="max-w-72 drop-shadow-2xl transition-transform duration-200 hover:-translate-y-1"

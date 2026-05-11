@@ -3,7 +3,7 @@ import { siteConfig } from "@/configs/site";
 const Contact = () => {
   return (
     <div className="space-y-3">
-      <p className="text-primary font-bold">Let's Work Together!</p>
+      <p className="text-primary font-bold">Let&apos;s Work Together!</p>
 
       <div className="space-y-2 text-xs">
         {siteConfig.contacts.map((info) => (
