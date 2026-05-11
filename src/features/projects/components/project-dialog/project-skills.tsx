@@ -21,8 +21,10 @@ const ProjectSkills = ({ skills }: { skills: Project["skills"] }) => {
               <Image
                 src={icon.icon}
                 alt=""
+                height={16}
+                width={16}
                 aria-hidden
-                className="size-4 opacity-90"
+                className="opacity-90"
               />
               <span>{icon.label}</span>
             </div>

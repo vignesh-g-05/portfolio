@@ -29,7 +29,9 @@ const CompanyBadge = ({
         >
           <Image
             src={icon}
-            className="size-4 rounded-xs object-cover"
+            width={16}
+            height={16}
+            className="rounded-xs object-cover"
             alt={label}
           />
           {!iconOnly && <span>{label}</span>}

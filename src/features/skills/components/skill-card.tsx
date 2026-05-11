@@ -20,9 +20,11 @@ const SkillCard = ({ icon, color, category }: SkillCardProps) => {
     >
       <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-white/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
       <Image
+        width={32}
+        height={32}
         src={skill.icon}
         alt={skill.label}
-        className={`size-8 rounded-sm p-2 md:size-10 ${color}`}
+        className={`rounded-sm p-2 md:size-10 ${color}`}
       />
       <div className="flex flex-col justify-center">
         <p className="text-sm font-medium md:text-base">{skill.label}</p>

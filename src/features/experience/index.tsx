@@ -27,9 +27,11 @@ const Experience = () => {
               className="shrink-0"
             >
               <Image
+                width={44}
+                height={44}
                 src="/icons/companies/techmaxima.png"
                 alt="TechMaxima logo"
-                className="border-border size-11 rounded-lg border object-contain md:size-12"
+                className="border-border rounded-lg border object-contain md:size-12"
               />
             </a>
             <div className="space-y-0.5">

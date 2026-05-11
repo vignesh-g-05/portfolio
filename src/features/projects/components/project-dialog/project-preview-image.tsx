@@ -8,8 +8,9 @@ const ProjectPreviewImage = ({
   image: string;
 }) => {
   return (
-    <div className="mx-auto aspect-video w-full overflow-hidden rounded-sm">
+    <div className="relative mx-auto aspect-video w-full overflow-hidden rounded-sm">
       <Image
+        fill
         src={image}
         alt={`${title} preview`}
         className="object-cover transition-transform duration-200 hover:scale-105"
