@@ -3,6 +3,7 @@ import "./globals.css";
 import { Fredoka, JetBrains_Mono, Outfit, Quicksand } from "next/font/google";
 
 import type { Metadata } from "next";
+import { Toaster } from "react-hot-toast";
 import { TooltipProvider } from "@/components/ui/shadcn/tooltip";
 
 export const metadata: Metadata = {
@@ -26,10 +27,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="bg-background text-foreground font-sans antialiased"
+      className="dark bg-background text-foreground font-sans antialiased"
     >
       <body>
         <TooltipProvider>{children}</TooltipProvider>
+        <Toaster position="top-right" />
       </body>
     </html>
   );
