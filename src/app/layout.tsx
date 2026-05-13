@@ -31,7 +31,22 @@ export default function RootLayout({
     >
       <body>
         <TooltipProvider>{children}</TooltipProvider>
-        <Toaster position="top-right" />
+        <Toaster
+          position="top-right"
+          toastOptions={{
+            style: {
+              background: "var(--secondary)",
+              color: "var(--secondary-foreground)",
+            },
+            duration: 5000,
+            success: {
+              iconTheme: {
+                primary: "var(--chart-3)",
+                secondary: "var(--secondary)",
+              },
+            },
+          }}
+        />
       </body>
     </html>
   );
