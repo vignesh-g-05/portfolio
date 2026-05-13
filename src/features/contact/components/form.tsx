@@ -1,6 +1,12 @@
 "use client";
 
-import { Mail, MessageSquare, User } from "lucide-react";
+import {
+  LoaderCircle,
+  Mail,
+  MessageSquare,
+  RotateCcw,
+  User,
+} from "lucide-react";
 import { useActionState, useEffect } from "react";
 
 import { Button } from "@/components/ui/shadcn/button";
@@ -8,7 +14,7 @@ import { sendMessageAction } from "@/app/actions/contact";
 import toast from "react-hot-toast";
 
 function Form() {
-  const [state, action] = useActionState(sendMessageAction, null);
+  const [state, action, isPending] = useActionState(sendMessageAction, null);
   useEffect(() => {
     if (!state) return;
     const { message, success } = state;
@@ -81,8 +87,14 @@ function Form() {
           className="bg-card -focus-within:shadow-[inset_1px_1px_4px_rgba(0,0,0,0.3),inset_-1px_-1px_4px_rgba(255,255,255,0.08)] w-full resize-none rounded-md p-3 text-sm shadow-[inset_2px_2px_6px_rgba(0,0,0,0.2),inset_-2px_-2px_6px_rgba(255,255,255,0.05)] transition-all outline-none"
         />
       </div>
-      <Button size="sm" className="ml-auto flex">
-        Send Message
+      <Button size="sm" disabled={isPending} className="ml-auto flex">
+        {isPending ? (
+          <span className="flex items-center justify-center gap-3">
+            <LoaderCircle className="animate-spin" /> Sending...
+          </span>
+        ) : (
+          "Send Message"
+        )}
       </Button>
     </form>
   );
