@@ -19,6 +19,12 @@ const TerminalPrompt = ({
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
+  const syncCursor = () => {
+    if (!inputRef.current) return;
+
+    setCursor(inputRef.current.selectionStart || 0);
+  };
+
   return (
     <div className="group relative" onClick={() => {}}>
       <input
@@ -26,17 +32,21 @@ const TerminalPrompt = ({
         aria-hidden
         className="pointer-events-none absolute -z-10 opacity-0"
         autoFocus
+        autoComplete="off"
+        spellCheck={false}
+        autoCorrect="off"
         type="text"
         value={input}
         onChange={(e) => {
           setInput(e.target.value);
         }}
-        onSelect={(e) => {
-          setCursor(e.currentTarget.selectionStart || 0);
-        }}
+        onSelect={syncCursor}
+        onFocus={syncCursor}
+        onKeyUp={syncCursor}
         onKeyDown={(e) => {
           if (e.key === "Enter") {
             e.preventDefault();
+            syncCursor();
 
             if (!input.trim()) return;
 
