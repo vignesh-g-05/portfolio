@@ -12,6 +12,14 @@ const Projects = () => {
             [{project.skills.join(", ")}]
           </p>
           <p className="text-foreground ml-4 text-xs">{project.description}</p>
+          <a
+            href={project.actions?.liveLink || project.actions?.githubLink}
+            target="_blank"
+            rel="noopener noreferer"
+            className="text-muted-foreground/70 ml-4 cursor-pointer text-xs italic hover:underline"
+          >
+            open {project.id}
+          </a>
         </li>
       ))}
     </ul>

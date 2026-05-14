@@ -1,11 +1,12 @@
+import type { Project } from "./types";
 import ProjectCard from "./components/project-card";
 import { ProjectDetails } from "./components/project-details";
-import type { Project } from "./types";
 
 const IMAGE_BASE_URL = "/images/projects";
 
 export const projects: Project[] = [
   {
+    id: "chatmaxima-widget",
     title: "ChatMaxima Widget",
     description: "Embeddable AI chat widget for websites",
     skills: ["nextjs", "react", "typescript", "tailwindcss"],
@@ -16,6 +17,7 @@ export const projects: Project[] = [
     company: "techmaxima",
   },
   {
+    id: "magic-quill",
     title: "Magic Quill",
     description: "AI powered course generator",
     skills: ["react", "typescript", "redux", "gemini"],
@@ -26,6 +28,7 @@ export const projects: Project[] = [
     },
   },
   {
+    id: "chatexpress",
     title: "ChatExpress",
     description: "Real-time socket server for chat widget",
     skills: ["nodejs", "express", "socketio", "redis"],
@@ -33,7 +36,8 @@ export const projects: Project[] = [
     company: "techmaxima",
   },
   {
-    title: "Linux Desktop Customization",
+    id: "linux-customization",
+    title: "Linux Customization",
     description: "custom linux desktop built from scratch",
     skills: ["linux", "bash", "lua", "css"],
     image: `${IMAGE_BASE_URL}/linux.png`,
@@ -44,6 +48,7 @@ export const projects: Project[] = [
   },
 
   {
+    id: "chatmaxima-academy",
     title: "ChatMaxima Academy",
     description: "AI powered course generator",
     skills: ["nextjs", "gemini", "neon", "tailwindcss"],
@@ -51,6 +56,7 @@ export const projects: Project[] = [
     company: "techmaxima",
   },
   {
+    id: "s-mart",
     title: "S-Mart",
     description: "Modern e-commerce web application",
     skills: ["react", "redux", "firebase", "framer"],

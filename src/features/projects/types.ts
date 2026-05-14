@@ -2,6 +2,7 @@ import type { Company } from "@/constants/companies";
 import type { Skill } from "@/constants/icons";
 
 export type Project = {
+  id: string;
   title: string;
   description: string;
   image: string;
