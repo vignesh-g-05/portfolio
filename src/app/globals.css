@@ -101,6 +101,7 @@ html {
   --card: oklch(0.23 0.02 270);
 
   color-scheme: dark;
+  scroll-behavior: smooth;
 }
 
 button {
