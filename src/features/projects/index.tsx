@@ -17,14 +17,14 @@ export const projects: Project[] = [
     company: "techmaxima",
   },
   {
-    id: "magic-quill",
-    title: "Magic Quill",
-    description: "AI powered course generator",
-    skills: ["react", "typescript", "redux", "gemini"],
-    image: `${IMAGE_BASE_URL}/magic-quill.png`,
+    id: "linux-customization",
+    title: "Linux Customization",
+    description: "custom linux desktop built from scratch",
+    skills: ["linux", "bash", "lua", "css"],
+    image: `${IMAGE_BASE_URL}/linux.png`,
     actions: {
-      liveLink: "https://magic-quill-ai.vercel.app",
-      githubLink: "https://github.com/vignesh-g-05/ai-course-generator",
+      liveLink: "/videos/linux-customization.mp4",
+      githubLink: "https://github.com/vignesh-g-05/dotfiles",
     },
   },
   {
@@ -36,17 +36,16 @@ export const projects: Project[] = [
     company: "techmaxima",
   },
   {
-    id: "linux-customization",
-    title: "Linux Customization",
-    description: "custom linux desktop built from scratch",
-    skills: ["linux", "bash", "lua", "css"],
-    image: `${IMAGE_BASE_URL}/linux.png`,
+    id: "magic-quill",
+    title: "Magic Quill",
+    description: "AI powered course generator",
+    skills: ["react", "typescript", "redux", "gemini"],
+    image: `${IMAGE_BASE_URL}/magic-quill.png`,
     actions: {
-      liveLink: "/videos/linux-customization.mp4",
-      githubLink: "https://github.com/vignesh-g-05/dotfiles",
+      liveLink: "https://magic-quill-ai.vercel.app",
+      githubLink: "https://github.com/vignesh-g-05/ai-course-generator",
     },
   },
-
   {
     id: "chatmaxima-academy",
     title: "ChatMaxima Academy",

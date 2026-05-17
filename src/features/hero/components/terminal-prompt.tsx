@@ -35,6 +35,7 @@ const TerminalPrompt = ({
         autoComplete="off"
         spellCheck={false}
         autoCorrect="off"
+        autoCapitalize="off"
         type="text"
         value={input}
         onChange={(e) => {
