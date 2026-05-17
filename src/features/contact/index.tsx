@@ -15,7 +15,7 @@ export default function Contact() {
         Contact
       </h2>
 
-      <article className="grid grid-cols-2 gap-8">
+      <article className="grid gap-8 md:grid-cols-2">
         <Details />
         <Form />
       </article>

@@ -3,7 +3,6 @@ import "./globals.css";
 import { Fredoka, JetBrains_Mono, Outfit, Quicksand } from "next/font/google";
 
 import type { Metadata } from "next";
-import { SmoothScrollProvider } from "@/components/smooth-scroll-provider";
 import { Toaster } from "react-hot-toast";
 import { TooltipProvider } from "@/components/ui/shadcn/tooltip";
 
@@ -31,7 +30,6 @@ export default function RootLayout({
       className="dark scrollbar-minimal bg-background text-foreground font-sans antialiased"
     >
       <body>
-        <SmoothScrollProvider />
         <TooltipProvider>{children}</TooltipProvider>
         <Toaster
           position="top-right"

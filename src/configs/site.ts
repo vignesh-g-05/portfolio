@@ -1,5 +1,6 @@
-import LinkedIn from "@/features/icons/linkedin";
 import { Github, Mail, Phone } from "lucide-react";
+
+import LinkedIn from "@/features/icons/linkedin";
 
 export const siteConfig = {
   name: "Vignesh G",
@@ -34,12 +35,6 @@ export const siteConfig = {
       value: "github.com/vignesh-g-05",
       href: "https://github.com/vignesh-g-05/",
       Icon: Github,
-    },
-    {
-      label: "Phone",
-      value: "+91 73393 78237",
-      href: "tel:+917339378237",
-      Icon: Phone,
     },
   ],
 
