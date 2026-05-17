@@ -1,4 +1,11 @@
-import { type Dispatch, type SetStateAction, useRef } from "react";
+"use client";
+import {
+  type Dispatch,
+  type SetStateAction,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 import { type History } from "./terminal";
 import { TERMINAL_COMMANDS } from "./commands";
@@ -18,6 +25,9 @@ const TerminalPrompt = ({
   setHistory: Dispatch<SetStateAction<History[]>>;
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
+  const isMobile =
+    typeof window !== "undefined" &&
+    window.matchMedia("(pointer: coarse)").matches;
 
   const syncCursor = () => {
     if (!inputRef.current) return;
@@ -31,7 +41,7 @@ const TerminalPrompt = ({
         ref={inputRef}
         aria-hidden
         className="pointer-events-none absolute -z-10 opacity-0"
-        autoFocus
+        autoFocus={!isMobile}
         autoComplete="off"
         spellCheck={false}
         autoCorrect="off"

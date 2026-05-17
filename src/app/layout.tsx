@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Vignesh G",
   description: "Portfolio app of Vignesh G",
   icons: {
-    icon: "/icon.svg",
+    icon: "favicon.ico",
   },
 };
 

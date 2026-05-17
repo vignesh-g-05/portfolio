@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+
 import MobileNavbar from "./mobile-navbar";
+import { useState } from "react";
 
 const MobileNavigation = () => {
   const [open, setOpen] = useState(false);
@@ -16,7 +17,12 @@ const MobileNavigation = () => {
       >
         {open ? <X /> : <Menu />}
       </button>
-      <MobileNavbar open={open} />
+      <MobileNavbar
+        open={open}
+        onClose={() => {
+          setOpen(false);
+        }}
+      />
     </>
   );
 };

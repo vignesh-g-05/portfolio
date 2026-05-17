@@ -1,7 +1,21 @@
-import { NAV_ITEMS } from "../../constant";
 import MobileNavItem from "./mobile-nav-item";
+import { NAV_ITEMS } from "../../constant";
+import { useEffect } from "react";
 
-const MobileNavbar = ({ open }: { open: boolean }) => {
+const MobileNavbar = ({
+  open,
+  onClose,
+}: {
+  open: boolean;
+  onClose: () => void;
+}) => {
+  useEffect(() => {
+    document.addEventListener("click", onClose);
+    return () => {
+      document.removeEventListener("click", onClose);
+    };
+  }, [onClose]);
+
   if (!open) return null;
 
   return (
