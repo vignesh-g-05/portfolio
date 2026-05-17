@@ -1,7 +1,8 @@
-import { buttonVariants } from "@/components/ui/shadcn/button";
-import { siteConfig } from "@/configs/site";
-import { cn } from "@/lib/utils";
 import { BriefcaseBusiness, FileText, Folder, MapPin } from "lucide-react";
+
+import { buttonVariants } from "@/components/ui/shadcn/button";
+import { cn } from "@/lib/utils";
+import { siteConfig } from "@/configs/site";
 
 const HeroDetails = () => {
   return (
@@ -43,7 +44,7 @@ const HeroDetails = () => {
           See My Work
         </a>
         <a
-          href="/vignesh-g-fullstack-developer-resume.pdf"
+          href="/vignesh-g-software-developer.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className={cn(buttonVariants({ variant: "outline" }), "bg-secondary")}
