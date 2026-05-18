@@ -1,5 +1,11 @@
 "use client";
-import { type Dispatch, type SetStateAction, useRef } from "react";
+import {
+  type Dispatch,
+  type SetStateAction,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 import { type History } from "./terminal";
 import { TERMINAL_COMMANDS } from "./commands";
@@ -19,9 +25,11 @@ const TerminalPrompt = ({
   setHistory: Dispatch<SetStateAction<History[]>>;
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
-  const isTouchDevice =
-    typeof window !== "undefined" &&
-    window.matchMedia("(pointer: coarse)").matches;
+  const [isTouchDevice] = useState(() => {
+    if (typeof window === "undefined") return false;
+
+    return window.matchMedia("(pointer: coarse)").matches;
+  });
 
   const syncCursor = () => {
     if (!inputRef.current) return;
