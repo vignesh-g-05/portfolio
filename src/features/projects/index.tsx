@@ -39,7 +39,7 @@ export const projects: Project[] = [
     id: "magic-quill",
     title: "Magic Quill",
     description: "AI powered course generator",
-    skills: ["react", "typescript", "redux", "gemini"],
+    skills: ["react", "typescript", "redux", "tailwindcss"],
     image: `${IMAGE_BASE_URL}/magic-quill.png`,
     actions: {
       liveLink: "https://magic-quill-ai.vercel.app",
@@ -47,11 +47,11 @@ export const projects: Project[] = [
     },
   },
   {
-    id: "chatmaxima-academy",
-    title: "ChatMaxima Academy",
-    description: "AI powered course generator",
-    skills: ["nextjs", "gemini", "neon", "tailwindcss"],
-    image: `${IMAGE_BASE_URL}/academy.png`,
+    id: "chatmaxima-maxvoice",
+    title: "ChatMaxima MaxVoice",
+    description: "Real-time voice chat for the ChatMaxima widget",
+    skills: ["fastapi", "redis", "livekit", "socketio"],
+    image: `${IMAGE_BASE_URL}/maxvoice.png`,
     company: "techmaxima",
   },
   {

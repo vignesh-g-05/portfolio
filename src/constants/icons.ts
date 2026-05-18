@@ -45,6 +45,14 @@ export const SKILL_ICONS = {
     icon: `${ICON_PATH}/framer.svg`,
     label: "Framer Motion",
   },
+  fastapi: {
+    icon: `${ICON_PATH}/fastapi.svg`,
+    label: "FastApi",
+  },
+  livekit: {
+    icon: `${ICON_PATH}/livekit.svg`,
+    label: "LiveKit",
+  },
   socketio: {
     icon: `${ICON_PATH}/socketio.svg`,
     label: "Socket.io",
@@ -52,14 +60,6 @@ export const SKILL_ICONS = {
   redis: {
     icon: `${ICON_PATH}/redis.svg`,
     label: "Redis",
-  },
-  gemini: {
-    icon: `${ICON_PATH}/gemini.svg`,
-    label: "Gemini API",
-  },
-  neon: {
-    icon: `${ICON_PATH}/neon.svg`,
-    label: "Neon DB",
   },
   linux: {
     icon: `${ICON_PATH}/linux.svg`,
