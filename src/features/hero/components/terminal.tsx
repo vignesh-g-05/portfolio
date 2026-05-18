@@ -24,7 +24,13 @@ const Terminal = () => {
   ]);
 
   const inputEndRef = useRef<HTMLDivElement>(null);
+  const hasMountedRef = useRef(false);
+
   useEffect(() => {
+    if (!hasMountedRef.current) {
+      hasMountedRef.current = true;
+      return;
+    }
     inputEndRef.current?.scrollIntoView({
       block: "nearest",
     });

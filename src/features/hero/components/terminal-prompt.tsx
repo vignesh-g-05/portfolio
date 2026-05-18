@@ -19,6 +19,9 @@ const TerminalPrompt = ({
   setHistory: Dispatch<SetStateAction<History[]>>;
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
+  const isTouchDevice =
+    typeof window !== "undefined" &&
+    window.matchMedia("(pointer: coarse)").matches;
 
   const syncCursor = () => {
     if (!inputRef.current) return;
@@ -33,6 +36,7 @@ const TerminalPrompt = ({
         aria-hidden
         className="pointer-events-none absolute -z-10 opacity-0"
         autoComplete="off"
+        autoFocus={!isTouchDevice}
         spellCheck={false}
         autoCorrect="off"
         autoCapitalize="off"
