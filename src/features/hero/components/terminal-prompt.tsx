@@ -25,17 +25,19 @@ const TerminalPrompt = ({
   setHistory: Dispatch<SetStateAction<History[]>>;
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
-  const [isTouchDevice] = useState(() => {
-    if (typeof window === "undefined") return false;
-
-    return window.matchMedia("(pointer: coarse)").matches;
-  });
-
   const syncCursor = () => {
     if (!inputRef.current) return;
 
     setCursor(inputRef.current.selectionStart || 0);
   };
+
+  useEffect(() => {
+    const canAutoFocus = window.innerWidth >= 768;
+
+    if (canAutoFocus) {
+      inputRef.current?.focus();
+    }
+  }, []);
 
   return (
     <div className="group relative" onClick={() => {}}>
@@ -44,7 +46,6 @@ const TerminalPrompt = ({
         aria-hidden
         className="pointer-events-none absolute -z-10 opacity-0"
         autoComplete="off"
-        autoFocus={!isTouchDevice}
         spellCheck={false}
         autoCorrect="off"
         autoCapitalize="off"

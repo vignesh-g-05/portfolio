@@ -8,7 +8,7 @@ export const siteConfig = {
   role: "Full-Stack Developer",
 
   description:
-    "Full-stack developer specializing in React, with solid experience building backend APIs and real-time features using Express.",
+    "Specialized in building performant React applications and real-time backend systems using Express.",
 
   location: "Tamil Nadu, India",
 
