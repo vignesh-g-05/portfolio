@@ -1,17 +1,12 @@
 "use client";
 
-import {
-  LoaderCircle,
-  Mail,
-  MessageSquare,
-  RotateCcw,
-  User,
-} from "lucide-react";
+import { LoaderCircle, Mail, MessageSquare, User } from "lucide-react";
 import { useActionState, useEffect } from "react";
 
 import { Button } from "@/components/ui/shadcn/button";
 import { sendMessageAction } from "@/app/actions/contact";
 import toast from "react-hot-toast";
+import { motion } from "motion/react";
 
 function Form() {
   const [state, action, isPending] = useActionState(sendMessageAction, null);
@@ -26,7 +21,14 @@ function Form() {
   }, [state]);
 
   return (
-    <form
+    <motion.form
+      initial={{ y: 15, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{
+        duration: 0.6,
+        delay: 0.1,
+      }}
+      viewport={{ once: true }}
       action={action}
       method="POST"
       className="bg-secondary w-full space-y-6 rounded-xl p-8 shadow-lg"
@@ -96,7 +98,7 @@ function Form() {
           "Send Message"
         )}
       </Button>
-    </form>
+    </motion.form>
   );
 }
 

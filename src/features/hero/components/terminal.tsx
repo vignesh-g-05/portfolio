@@ -5,6 +5,8 @@ import TerminalPrompt from "./terminal-prompt";
 import NeoFetch from "./commands/neofetch";
 import Help from "./commands/help";
 
+import { motion } from "motion/react";
+
 export type History = {
   prompt: string;
   output: ReactNode;
@@ -37,7 +39,19 @@ const Terminal = () => {
   }, [input, history]);
 
   return (
-    <div
+    <motion.div
+      initial={{
+        opacity: 0,
+        x: 20,
+      }}
+      animate={{
+        opacity: 1,
+        x: 0,
+      }}
+      transition={{
+        duration: 0.5,
+        ease: "easeOut",
+      }}
       role="presentation"
       className="bg-background border-border mx-auto w-full overflow-hidden rounded-lg border text-sm md:block"
       style={{
@@ -68,7 +82,7 @@ const Terminal = () => {
         />
         <div ref={inputEndRef}></div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

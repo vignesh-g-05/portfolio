@@ -2,10 +2,11 @@ import { CalendarDays, Check, ExternalLink } from "lucide-react";
 
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { motion } from "motion/react";
 
 const Experience = () => {
   return (
-    <section
+    <motion.section
       className="scroll-mt-40 space-y-5"
       aria-labelledby="experience-heading"
       id="experience"
@@ -16,7 +17,13 @@ const Experience = () => {
       >
         Experience
       </h2>
-      <article className="border-border bg-secondary overflow-hidden rounded-xl border">
+      <motion.article
+        initial={{ y: 15, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="border-border bg-secondary overflow-hidden rounded-xl border"
+      >
         {/* Card header */}
         <div className="flex items-start justify-between gap-4 px-5 py-4">
           <div className="flex items-center gap-3.5">
@@ -103,8 +110,8 @@ const Experience = () => {
             ))}
           </ul>
         </div>
-      </article>
-    </section>
+      </motion.article>
+    </motion.section>
   );
 };
 

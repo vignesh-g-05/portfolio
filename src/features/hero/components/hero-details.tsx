@@ -3,10 +3,25 @@ import { BriefcaseBusiness, FileText, Folder, MapPin } from "lucide-react";
 import { buttonVariants } from "@/components/ui/shadcn/button";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/configs/site";
+import { motion } from "motion/react";
 
 const HeroDetails = () => {
   return (
-    <div className="space-y-8">
+    <motion.div
+      initial={{
+        x: -20,
+        opacity: 0,
+      }}
+      animate={{
+        x: 0,
+        opacity: 1,
+      }}
+      transition={{
+        duration: 0.5,
+        ease: "easeOut",
+      }}
+      className="space-y-8"
+    >
       <div className="space-y-4">
         <h1 className="font-heading text-primary text-5xl font-extrabold md:text-6xl lg:text-7xl">
           {siteConfig.name}
@@ -61,7 +76,7 @@ const HeroDetails = () => {
           Connect with me
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

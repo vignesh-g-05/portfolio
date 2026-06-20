@@ -1,11 +1,5 @@
 "use client";
-import {
-  type Dispatch,
-  type SetStateAction,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { type Dispatch, type SetStateAction, useEffect, useRef } from "react";
 
 import { type History } from "./terminal";
 import { TERMINAL_COMMANDS } from "./commands";
@@ -48,7 +42,7 @@ const TerminalPrompt = ({
         autoComplete="off"
         spellCheck={false}
         autoCorrect="off"
-        autoCapitalize="off"
+        autoCapitalize="none"
         type="text"
         value={input}
         onChange={(e) => {

@@ -1,10 +1,16 @@
 import { siteConfig } from "@/configs/site";
 import { cn } from "@/lib/utils";
 import { ChevronRight, Clock } from "lucide-react";
-
+import { motion } from "motion/react";
 function Details() {
   return (
-    <div className="flex flex-col gap-4">
+    <motion.div
+      initial={{ y: 15, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="flex flex-col gap-4"
+    >
       <div className="space-y-1">
         <h5 className="font-heading text-foreground text-lg font-bold tracking-tight">
           Let’s connect
@@ -77,7 +83,7 @@ function Details() {
           </span>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
