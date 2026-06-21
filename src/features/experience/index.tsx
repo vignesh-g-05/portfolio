@@ -90,9 +90,9 @@ const Experience = () => {
           {/* Bullets */}
           <ul className="space-y-2.5">
             {[
-              "Developed 2 SaaS applications and a real-time backend service using WebSockets",
-              "Refactored complex application logic to improve performance and maintainability",
-              "Built and integrated real-time features using Next.js and Socket.IO",
+              "Owned development of three production applications, delivering frontend and backend features using React, TypeScript, Node.js, and Express.",
+              "Shipped 10+ customer-facing features while modernizing legacy codebases and improving maintainability.",
+              "Improved legacy applications by refactoring code, fixing issues, and building new features.",
             ].map((point) => (
               <li key={point} className="flex items-start gap-2.5">
                 <span

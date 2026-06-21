@@ -52,6 +52,9 @@ export const projects: Project[] = [
     description: "Real-time voice chat for the ChatMaxima widget",
     skills: ["fastapi", "redis", "livekit", "socketio"],
     image: `${IMAGE_BASE_URL}/maxvoice.png`,
+    actions: {
+      liveLink: "https://chatmaxima.com",
+    },
     company: "techmaxima",
   },
   {
